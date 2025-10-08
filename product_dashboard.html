@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Product Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1f2a38;
+            color: #cfd8dc;
+        }
+
+        .dashboard {
+            max-width: 1200px;
+            margin: auto;
+            background-color: #27343d;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header h2 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .filter-panel {
+            background-color: #2e3b47;
+            padding: 15px;
+            border-radius: 6px;
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .filter-panel label {
+            font-size: 14px;
+            color: #cfd8dc;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-panel select,
+        .filter-panel input {
+            margin-top: 6px;
+            padding: 6px 10px;
+            border-radius: 4px;
+            border: none;
+            background-color: #3b4a59;
+            color: #cfd8dc;
+            font-size: 14px;
+        }
+
+        .filter-panel input[type="range"] {
+            width: 100px;
+        }
+
+        .filter-panel input:focus,
+        .filter-panel select:focus {
+            outline: none;
+            box-shadow: 0 0 3px #42a5f5;
+        }
+
+        .action-btn {
+            background-color: #42a5f5;
+            border: none;
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background-color: #1e88e5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #2e3b47;
+        }
+
+        thead th {
+            padding: 12px;
+            text-align: left;
+            position: relative;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        thead th .sort-icon {
+            font-size: 10px;
+            margin-left: 5px;
+            color: #90caf9;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #3b4a59;
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #3b4a59;
+        }
+
+        tbody td {
+            padding: 10px 12px;
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .address-info {
+            font-size: 12px;
+            color: #90caf9;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #2e3b47;
+            min-width: 140px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #cfd8dc;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #3b4a59;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dashboard">
+        <div class="header">
+            <h2>Product Dashboard</h2>
+            <button class="action-btn">New Entry</button>
+        </div>
+
+        <div class="filter-panel">
+            <label>
+                Sort:
+                <select>
+                    <option>Ascending</option>
+                    <option>Descending</option>
+                </select>
+            </label>
+            <label>
+                Limit Range:
+                <input type="range" min="0" max="100" value="50" />
+            </label>
+            <label>
+                Filter By:
+                <select>
+                    <option>Company</option>
+                    <option>Contact</option>
+                    <option>Address</option>
+                    <option>Revenue</option>
+                </select>
+            </label>
+            <button class="action-btn">Apply</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer <span class="sort-icon">▲</span></th>
+                    <th>Company <span class="sort-icon">▲</span></th>
+                    <th>Contact <span class="sort-icon">▲</span></th>
+                    <th>Address</th>
+                    <th>Revenue <span class="sort-icon">▲</span></th>
+                    <th>V.A.T</th>
+                    <th>Total Price <span class="sort-icon">▲</span></th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>IBBP Apps</td>
+                    <td>H&R Real Estate</td>
+                    <td>Joshua O'Neil</td>
+                    <td>276 Tremont Street, Boston, MA <br><span class="address-info">View in Google Maps</span></td>
+                    <td>$420,930</td>
+                    <td>$12,834</td>
+                    <td>$433,764</td>
+                    <td>Finished</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="action-btn">⋮</button>
+                            <div class="dropdown-content">
+                                <a href="#">Compare</a>
+                                <a href="#">Edit</a>
+                                <a href="#">View Revisions</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>SRA - General Contacts</td>
+                    <td>Great West</td>
+                    <td>Eli Ahmad</td>
+                    <td>1310 Mission Street, San Francisco, CA</td>
+                    <td>$312,840</td>
+                    <td>$8,210</td>
+                    <td>$321,050</td>
+                    <td>In Progress</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="action-btn">⋮</button>
+                            <div class="dropdown-content">
+                                <a href="#">Compare</a>
+                                <a href="#">Edit</a>
+                                <a href="#">View Revisions</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>CCST</td>
+                    <td>Fording Financial</td>
+                    <td>Dennis Vill</td>
+                    <td>San Diego, CA 92138</td>
+                    <td>$112,483</td>
+                    <td>$3,400</td>
+                    <td>$115,883</td>
+                    <td>Finished</td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="action-btn">⋮</button>
+                            <div class="dropdown-content">
+                                <a href="#">Compare</a>
+                                <a href="#">Edit</a>
+                                <a href="#">View Revisions</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

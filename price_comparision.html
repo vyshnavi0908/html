@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nonprofit Pricing Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .pricing-container {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .pricing-container h1 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+
+        .plan-header {
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .plan-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .plan-desc {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-secondary {
+            background-color: #17a2b8;
+        }
+
+        .btn-secondary:hover {
+            background-color: #117a8b;
+        }
+
+        .feature-check {
+            color: #28a745;
+            font-size: 18px;
+        }
+
+        .section-title {
+            background-color: #f1f3f5;
+            font-weight: bold;
+        }
+
+        .learn-more {
+            font-size: 12px;
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .logo-img {
+            width: 100px;
+            max-width: 100%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            th, td {
+                padding: 10px;
+            }
+            .btn {
+                padding: 8px 14px;
+                font-size: 12px;
+            }
+            .logo-img {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pricing-container">
+        <h1 style="color: blue;">Simple nonprofit pricing</h1>
+
+        <table>
+            <thead>
+                <tr class="plan-header">
+                    <th>
+                        <img src="logo.png" alt="Nonprofit Logo" class="logo-img">
+                    </th>
+                    <th>
+                        <div class="plan-name">GoFundMe</div>
+                        <div class="plan-desc">Quick and easy online crowdfunding</div>
+                        <button class="btn">Get Started</button><br>
+                        <span class="learn-more">Learn more</span>
+                    </th>
+                    <th>
+                        <div class="plan-name">Essential</div>
+                        <div class="plan-desc">All the basics for event & team crowdfunding</div>
+                        <button class="btn">Get Started</button><br>
+                        <span class="learn-more">Learn more</span>
+                    </th>
+                    <th>
+                        <div class="plan-name">Premium</div>
+                        <div class="plan-desc">Everything you need to grow your nonprofit</div>
+                        <button class="btn btn-secondary">Contact Us</button><br>
+                        <span class="learn-more">Learn more</span>
+                    </th>
+                    <th>
+                        <div class="plan-name">Enterprise</div>
+                        <div class="plan-desc">Advanced features for scaling your nonprofit</div>
+                        <button class="btn btn-secondary">Contact Us</button><br>
+                        <span class="learn-more">Learn more</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="section-title"><td colspan="5">Pricing</td></tr>
+                <tr>
+                    <td>Plan cost</td>
+                    <td>Free</td>
+                    <td>Free</td>
+                    <td>Contact us</td>
+                    <td>Contact us</td>
+                </tr>
+                <tr>
+                    <td>Platform fee</td>
+                    <td>0%</td>
+                    <td>5%</td>
+                    <td>3%</td>
+                    <td>Contact us</td>
+                </tr>
+                <tr>
+                    <td>Payment processing</td>
+                    <td>2.9% + 30¢</td>
+                    <td>2.9% + 30¢</td>
+                    <td>2.4% + 30¢</td>
+                    <td>Contact us</td>
+                </tr>
+
+                <tr class="section-title"><td colspan="5">Features</td></tr>
+                <tr>
+                    <td>Unlimited fundraising campaigns</td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Easy access to funds</td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Mobile optimized</td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Basic donor data</td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Team fundraising</td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Unlimited fundraising events</td>
+                    <td></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                </tr>
+                <tr>
+                    <td>Comprehensive donor data</td>
+                    <td></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                    <td><span class="feature-check">✔</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

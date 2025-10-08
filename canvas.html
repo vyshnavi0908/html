@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canvas 2D</title>
+</head>
+<body>
+
+<h2>Inserting 2D elements with canvas</h2>
+
+<canvas id="myCanvas" width="600" height="400"
+style="border:1px solid black;"></canvas>
+
+<script>
+ 
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  ctx.fillStyle = "yellow";
+  ctx.fillRect(50, 50, 150, 100);
+  ctx.beginPath();
+  ctx.arc(350, 120, 60, 0, 2 * Math.PI);
+  ctx.fillStyle = "blue";
+  ctx.fill();
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(100, 300);
+  ctx.lineTo(500, 300);
+  ctx.strokeStyle = "orange";
+  ctx.lineWidth = 4;
+  ctx.stroke();
+</script>
+
+</body>
+</html>

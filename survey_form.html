@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Survey Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #eef2f3, #d9e4f5);
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      background: #fff;
+      margin: auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 12px 0 6px;
+      color: #333;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .radio-group {
+      margin: 10px 0 20px;
+    }
+    .radio-group label {
+      font-weight: normal;
+      display: block;
+      margin-bottom: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    button:hover {
+      background: #0056b3;
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2> Phone Survey Form</h2>
+    <form>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+      <label for="service">How satisfied are you with our phone service?</label>
+      <select id="service" name="service" required>
+        <option value="">-- Select an option --</option>
+        <option>Very Satisfied</option>
+        <option>Satisfied</option>
+        <option>Neutral</option>
+        <option>Dissatisfied</option>
+        <option>Very Dissatisfied</option>
+      </select>
+
+      <label>How often do you use our phone service?</label>
+      <div class="radio-group">
+        <label><input type="radio" name="usage" value="Daily" required> Daily</label>
+        <label><input type="radio" name="usage" value="Weekly"> Weekly</label>
+        <label><input type="radio" name="usage" value="Monthly"> Monthly</label>
+        <label><input type="radio" name="usage" value="Rarely"> Rarely</label>
+      </div>
+
+      <label for="feedback">Additional Feedback</label>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+
+      <button type="submit">Submit Survey</button>
+    </form>
+  </div>
+</body>
+</html>

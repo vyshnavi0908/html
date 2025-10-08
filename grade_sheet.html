@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      width: 800px;
+      padding: 20px 40px;
+      border: 1px solid #aaa;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+      position: relative; 
+    }
+    .student-photo {
+      position: absolute;
+      top: 50px;
+      right: 40px;
+      width: 100px;
+      height: 120px;
+      border: 1px solid black;
+      object-fit: cover;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid black;
+      padding-bottom: 10px;
+    }
+    .header img {
+      width: 80px;
+      display: block;
+      margin: 0 auto 10px auto;
+    }
+    .header-text h2, .header-text h3, .header-text p {
+      margin: 4px 0;
+    }
+    .details {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .details-left, .details-right {
+      width: 45%;
+      line-height: 1.8;
+    }
+    .details span {
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background: #ddd;
+    }
+    .credits-section {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px auto 10px auto;
+      font-weight: bold;
+      text-align: left;
+    }
+    .left-block {
+      line-height: 1.8;
+    }
+    .right-block {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="photo.jpg" alt="Photo" class="student-photo">
+
+    <div class="header">
+      <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Mohan_Babu_University_logo.png" alt="MBULogo">
+      <div class="header-text">
+        <h2>MOHAN BABU UNIVERSITY</h2>
+        <p>Sree Sainath Nagar, Tirupati – 517 102, A.P.</p>
+        <h3>GRADE CARD</h3>
+        <p>III-Semester - Batch-II Nov-2024</p>
+      </div>
+    </div>
+
+    <div class="details">
+      <div class="details-left">
+        <p><span>Student Name :</span> RAMISETTY VYSHNAVI</p>
+        <p><span>Roll Number :</span> 23102A020056</p>
+        <p><span>Program Name :</span> B.Tech. - Computer Science and Engineering (Cyber Security)</p>
+      </div>
+      <div class="details-right">
+        <p><span>Father's Name :</span> RAMISETTY VENKATESWARLU</p>
+        <p><span>Academic Year :</span> 2025-2026</p>
+        <p><span>Mother's Name :</span> RAMISETTY BHANUMATHI</p>
+      </div>
+    </div>
+
+    <table>
+      <tr>
+        <th>Course Code</th>
+        <th>Course Name</th>
+        <th>Credits</th>
+        <th>Grade Point</th>
+        <th>Grade</th>
+      </tr>
+      <tr><td>22MM101405</td><td>NUMERICAL METHODS, PROBABILITY AND STATISTICS</td><td>3</td><td>9</td><td>A+</td></tr>
+      <tr><td>22AI101019M</td><td>FOUNDATIONS OF OPERATING SYSTEMS</td><td>3</td><td>10</td><td>O</td></tr>
+      <tr><td>22CS102002</td><td>PYTHON PROGRAMMING</td><td>4</td><td>10</td><td>O</td></tr>
+      <tr><td>22CS102003</td><td>DATA STRUCTURES</td><td>4</td><td>9</td><td>A+</td></tr>
+      <tr><td>22CB102002</td><td>COMPUTER NETWORKS</td><td>4</td><td>10</td><td>O</td></tr>
+      <tr><td>22LG201701</td><td>PERSONALITY DEVELOPMENT</td><td>3</td><td>10</td><td>O</td></tr>
+      <tr><td>22CM101402M</td><td>PRINCIPLES OF BUSINESS ECONOMICS AND ACCOUNTANCY</td><td>3</td><td>10</td><td>O</td></tr>
+      <tr><td>22AB107601</td><td>NSS ACTIVITIES*</td><td>2</td><td>10</td><td>O</td></tr>
+    </table>
+
+    <div class="credits-section">
+      <div class="left-block">
+        Credits Registered / Completed : <b>29 / 29</b><br>
+        Credits Registered : <b>29</b><br>
+        Credits Completed : <b>29</b><br>
+        CGPA : <b>9.48</b>
+      </div>
+      <div class="right-block">
+        SGPA : 9.74
+      </div>
+    </div>
+  </div>
+</body>
+</html>

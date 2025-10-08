@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pricing Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #ffffff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        td {
+            width: 300px;
+            vertical-align: top;
+            text-align: center;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        td:last-child {
+            border-right: none;
+        }
+        .plan-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .plan-desc {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+        .plan-price {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .price-term {
+            font-size: 14px;
+            color: #888;
+        }
+        .features {
+            text-align: left;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #555;
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .features li {
+            margin: 8px 0;
+        }
+        .read-more {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            color: #fff;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+        .personal-btn {
+            background-color: #6c63ff;
+        }
+        .personal-btn:hover {
+            background-color: #574fd1;
+        }
+        .business-btn {
+            background-color: #ff6b6b;
+        }
+        .business-btn:hover {
+            background-color: #e55a5a;
+        }
+        .enterprise-btn {
+            background-color: #6c63ff;
+        }
+        .enterprise-btn:hover {
+            background-color: #574fd1;
+        }
+        .plan-image {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>
+                <div class="plan-title">Personal</div>
+                <div class="plan-desc">We Think Ahead</div>
+                <div class="plan-price"><span style="color:#6c63ff;">$29</span></div>
+                <div class="price-term">/month</div>
+                <ul class="features">
+                    <li>Mobile-Optimized</li>
+                    <li>Free Custom Domain</li>
+                    <li>Best Web Hosting</li>
+                    <li>Outstanding Support Team</li>
+                    <li>Our Happy Customers</li>
+                </ul>
+                <img src="https://via.placeholder.com/100?text=Personal" alt="Personal Plan" class="plan-image">
+                <a href="#" class="read-more personal-btn">Read More</a>
+            </td>
+
+            <td>
+                <div class="plan-title">Business</div>
+                <div class="plan-desc">Special Offer</div>
+                <div class="plan-price"><span style="color:#ff6b6b;">$38</span></div>
+                <div class="price-term">/month</div>
+                <ul class="features">
+                    <li>Mobile-Optimized</li>
+                    <li>Free Custom Domain</li>
+                    <li>Best Web Hosting</li>
+                    <li>Outstanding Support Team</li>
+                    <li>Our Happy Customers</li>
+                </ul>
+                <img src="https://via.placeholder.com/100?text=Business" alt="Business Plan" class="plan-image">
+                <a href="#" class="read-more business-btn">Read More</a>
+            </td>
+
+            <td>
+                <div class="plan-title">Enterprise</div>
+                <div class="plan-desc">Our Best Solution</div>
+                <div class="plan-price"><span style="color:#6c63ff;">$75</span></div>
+                <div class="price-term">/month</div>
+                <ul class="features">
+                    <li>Mobile-Optimized</li>
+                    <li>Free Custom Domain</li>
+                    <li>Best Web Hosting</li>
+                    <li>Outstanding Support Team</li>
+                    <li>Our Happy Customers</li>
+                </ul>
+                <img src="https://via.placeholder.com/100?text=Enterprise" alt="Enterprise Plan" class="plan-image">
+                <a href="#" class="read-more enterprise-btn">Read More</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+

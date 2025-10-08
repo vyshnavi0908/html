@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JS Events Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 10px; 
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>JavaScript Events Demo</h2>
+
+
+  <button onclick="showMessage()">Click Me</button>
+  <p id="msg"></p>
+
+  
+  <div id="hoverBox" onmouseover="changeColor()" onmouseout="resetColor()"> 
+    Hover Me
+  </div>
+
+
+  <input type="text" id="keyinput" placeholder="Type Something" onkeydown="keyPressed(event)">
+  <p id="keymsg"></p>
+
+
+  <select id="myselect" onchange="selectChanged()">
+    <option value="">--- Choose a color ---</option>
+    <option value="Red">Red</option>
+    <option value="Green">Green</option>
+    <option value="Blue">Blue</option>
+  </select>
+  <p id="selectmsg"></p>
+
+  <script>
+    function showMessage() {
+      document.getElementById("msg").innerText = "Button clicked!";
+    }
+
+    function changeColor() {
+      document.getElementById("hoverBox").style.background = "orange";
+    }
+
+    function resetColor() {
+      document.getElementById("hoverBox").style.background = "lightblue";
+    }
+
+    function keyPressed(event) {
+      document.getElementById("keymsg").innerText = "You pressed: " + event.key;
+    }
+
+    function selectChanged() {
+      let val = document.getElementById("myselect").value;
+      document.getElementById("selectmsg").innerText = "You selected: " + val;
+    }
+  </script>
+
+</body>
+</html>
